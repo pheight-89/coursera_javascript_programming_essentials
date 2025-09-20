@@ -49,3 +49,22 @@ let isAuthneticated = true;
 let authenticationStatus = isAuthneticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+let roleType = "employee";
+let roleAuthorization;
+
+switch (roleType){
+    case "employee":
+        roleAuthorization = "Dietary Services"
+        break;
+    case "member":
+        roleAuthorization = "Dietary Services, 1:1 Dietician Service"
+        break;
+    case "subscriber":
+        roleAuthorization = "Partial Dietary Services"
+        break;
+    case "non-subscriber":
+        roleAuthorization = "Enrolling or Subscribing First"
+}
+
+console.log(`Your role is ${roleType} and you are authorized for ${roleAuthorization}`)
